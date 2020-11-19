@@ -22,6 +22,11 @@
     }
     tr{
         line-height: 55px;
+        transition: .3s;
+        &:hover{
+            transition: .3s;
+            background: map-get($color-group,'primary');
+        }
     }
     td{
         .btn{

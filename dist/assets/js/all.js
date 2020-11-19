@@ -1,6 +1,26 @@
-// $(document).ready(() => {
-// });
 "use strict";
+
+$(document).ready(function () {
+  // menu click
+  if (location.pathname == '/admin.html') {
+    $('.new-admin').hide();
+    $('.all-courses').show();
+    $('ul li').removeClass('active');
+    $('ul li:nth-child(5)').addClass('active');
+  } else {
+    $('.new-admin').show();
+    $('.all-courses').hide();
+  }
+
+  $('.btn-edit').click(function () {
+    $('.editor').removeClass('d-none');
+    $('.user-self-feedback').addClass('d-none');
+  });
+  $('.btn-cancel').click(function () {
+    $('.editor').addClass('d-none');
+    $('.user-self-feedback').removeClass('d-none');
+  });
+});
 "use strict";
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }

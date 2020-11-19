@@ -8,4 +8,12 @@
             display: none;
         }
     }
+    select{
+        font-size: map-get($font-size, md);
+        line-height: map-get($font-line-height, md);
+        font-weight: bold;
+        color: map-get($color-group,'secondary');
+        border: 0;
+        cursor: pointer;
+    }
 }

@@ -22,7 +22,7 @@
         <ul class="sidebar-menu">
             <li>
                 <a href="javascript:void(0)">
-                    <span class="material-icons mr-xl-3 mr-lg-3 mr-0">
+                    <span class="material-icons mr-xl-3 mr-lg-3 mr-0 ml-2">
                         insert_chart
                     </span>
                     <span>Dashboard</span>
@@ -30,7 +30,7 @@
             </li>
             <li>
                 <a href="javascript:void(0)">
-                    <span class="material-icons mr-xl-3 mr-lg-3 mr-0">
+                    <span class="material-icons mr-xl-3 mr-lg-3 mr-0 ml-2">
                         question_answer
                     </span>
                     <span>forum</span>
@@ -38,7 +38,7 @@
             </li>
             <li class="active">
                 <a href="/assignment.html">
-                    <span class="material-icons mr-xl-3 mr-lg-3 mr-0">
+                    <span class="material-icons mr-xl-3 mr-lg-3 mr-0 ml-2">
                         assignment
                     </span>
                     <span>Assignment</span>
@@ -46,7 +46,7 @@
             </li>
             <li>
                 <a href="javascript:void(0)">
-                    <span class="material-icons mr-xl-3 mr-lg-3 mr-0">
+                    <span class="material-icons mr-xl-3 mr-lg-3 mr-0 ml-2">
                         video_library
                     </span>
                     <span>Course</span>
@@ -54,7 +54,7 @@
             </li>
             <li>
                 <a href="/admin.html">
-                    <span class="material-icons mr-xl-3 mr-lg-3 mr-0">
+                    <span class="material-icons mr-xl-3 mr-lg-3 mr-0 ml-2">
                         supervisor_account
                     </span>
                     <span>Admin</span>
@@ -62,7 +62,7 @@
             </li>
             <li>
                 <a href="javascript:void(0)">
-                    <span class="material-icons mr-xl-3 mr-lg-3 mr-0">
+                    <span class="material-icons mr-xl-3 mr-lg-3 mr-0 ml-2">
                         settings
                     </span>
                     <span>Settings</span>
@@ -80,29 +80,31 @@
 
     <main class="">
         <header class="d-flex justify-content-between">
-            <div class="d-flex position-relative">
+            <div class="d-flex position-relative align-items-center">
                 <h2>Assignment</h2>
                 <div class="all-courses dropdown">
-                    <button class="btn btn-secondary bg-transparent text-dark border-0 dropdown-toggle d-flex align-items-center" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
-                        All Courses
-                        <span class="material-icons text-third">
+                    <div class="dropdown d-flex">
+                        <select>
+                            <option>All Courses</option>
+                            <option>HTML</option>
+                            <option>CSS</option>
+                            <option>Javascript</option>
+                        </select>
+                        <!-- <span class="material-icons text-third">
                             keyboard_arrow_down
-                        </span>                            
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
+                        </span>   -->
+                    </div>
                 </div>
-                <button type="button" class="btn btn-primary text-dark bg-transparent border-0 d-flex align-items-center" data-toggle="modal" data-target="#add-admin">
-                    <span class="material-icons mr-3 text-third">
-                        add
-                    </span>
-                    <span>
-                        Add New Admin
-                    </span>
-                  </button>
+                <div class="new-admin">
+                    <button type="button" class="btn btn-newAdmin text-dark bg-transparent border-0 d-flex align-items-center" data-toggle="modal" data-target="#add-admin">
+                        <span class="material-icons mr-3 text-third">
+                            add
+                        </span>
+                        <span>
+                            Add New Admin
+                        </span>
+                      </button>
+                </div>
             </div>
             <div class="d-flex">
                 <span class="material-icons mr-xl-3 mr-lg-3 mr-0">
@@ -185,8 +187,187 @@
           </button>
         </td>
       </tr>
+      <tr>
+        <th scope="row">#3</th>
+        <td>Zaina Goldsmith</td>
+        <td>zaina.goldsmith@mail.com</td>
+        <td>Yes</td>
+        <td>
+          <button type="button" class="btn btn-primary bg-transparent border-0" data-toggle="modal" data-target="#edit-admin">
+            <span class="material-icons text-dark">
+              create
+            </span>
+          </button>
+          <button type="button" class="btn btn-primary bg-transparent border-0" data-toggle="modal" data-target="#review">
+            <span class="material-icons text-dark">
+              visibility
+            </span>
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">#3</th>
+        <td>Zaina Goldsmith</td>
+        <td>zaina.goldsmith@mail.com</td>
+        <td>Yes</td>
+        <td>
+          <button type="button" class="btn btn-primary bg-transparent border-0" data-toggle="modal" data-target="#edit-admin">
+            <span class="material-icons text-dark">
+              create
+            </span>
+          </button>
+          <button type="button" class="btn btn-primary bg-transparent border-0" data-toggle="modal" data-target="#review">
+            <span class="material-icons text-dark">
+              visibility
+            </span>
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">#3</th>
+        <td>Zaina Goldsmith</td>
+        <td>zaina.goldsmith@mail.com</td>
+        <td>Yes</td>
+        <td>
+          <button type="button" class="btn btn-primary bg-transparent border-0" data-toggle="modal" data-target="#edit-admin">
+            <span class="material-icons text-dark">
+              create
+            </span>
+          </button>
+          <button type="button" class="btn btn-primary bg-transparent border-0" data-toggle="modal" data-target="#review">
+            <span class="material-icons text-dark">
+              visibility
+            </span>
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">#3</th>
+        <td>Zaina Goldsmith</td>
+        <td>zaina.goldsmith@mail.com</td>
+        <td>Yes</td>
+        <td>
+          <button type="button" class="btn btn-primary bg-transparent border-0" data-toggle="modal" data-target="#edit-admin">
+            <span class="material-icons text-dark">
+              create
+            </span>
+          </button>
+          <button type="button" class="btn btn-primary bg-transparent border-0" data-toggle="modal" data-target="#review">
+            <span class="material-icons text-dark">
+              visibility
+            </span>
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">#3</th>
+        <td>Zaina Goldsmith</td>
+        <td>zaina.goldsmith@mail.com</td>
+        <td>Yes</td>
+        <td>
+          <button type="button" class="btn btn-primary bg-transparent border-0" data-toggle="modal" data-target="#edit-admin">
+            <span class="material-icons text-dark">
+              create
+            </span>
+          </button>
+          <button type="button" class="btn btn-primary bg-transparent border-0" data-toggle="modal" data-target="#review">
+            <span class="material-icons text-dark">
+              visibility
+            </span>
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">#3</th>
+        <td>Zaina Goldsmith</td>
+        <td>zaina.goldsmith@mail.com</td>
+        <td>Yes</td>
+        <td>
+          <button type="button" class="btn btn-primary bg-transparent border-0" data-toggle="modal" data-target="#edit-admin">
+            <span class="material-icons text-dark">
+              create
+            </span>
+          </button>
+          <button type="button" class="btn btn-primary bg-transparent border-0" data-toggle="modal" data-target="#review">
+            <span class="material-icons text-dark">
+              visibility
+            </span>
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">#3</th>
+        <td>Zaina Goldsmith</td>
+        <td>zaina.goldsmith@mail.com</td>
+        <td>Yes</td>
+        <td>
+          <button type="button" class="btn btn-primary bg-transparent border-0" data-toggle="modal" data-target="#edit-admin">
+            <span class="material-icons text-dark">
+              create
+            </span>
+          </button>
+          <button type="button" class="btn btn-primary bg-transparent border-0" data-toggle="modal" data-target="#review">
+            <span class="material-icons text-dark">
+              visibility
+            </span>
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">#3</th>
+        <td>Zaina Goldsmith</td>
+        <td>zaina.goldsmith@mail.com</td>
+        <td>Yes</td>
+        <td>
+          <button type="button" class="btn btn-primary bg-transparent border-0" data-toggle="modal" data-target="#edit-admin">
+            <span class="material-icons text-dark">
+              create
+            </span>
+          </button>
+          <button type="button" class="btn btn-primary bg-transparent border-0" data-toggle="modal" data-target="#review">
+            <span class="material-icons text-dark">
+              visibility
+            </span>
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">#3</th>
+        <td>Zaina Goldsmith</td>
+        <td>zaina.goldsmith@mail.com</td>
+        <td>Yes</td>
+        <td>
+          <button type="button" class="btn btn-primary bg-transparent border-0" data-toggle="modal" data-target="#edit-admin">
+            <span class="material-icons text-dark">
+              create
+            </span>
+          </button>
+          <button type="button" class="btn btn-primary bg-transparent border-0" data-toggle="modal" data-target="#review">
+            <span class="material-icons text-dark">
+              visibility
+            </span>
+          </button>
+        </td>
+      </tr>
     </tbody>
   </table>
+  <nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-end">
+      <li class="page-item disabled">
+        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+          <
+        </a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#">
+          >
+        </a>
+      </li>
+    </ul>
+  </nav>
 </div>
 
 <!---編輯--->
@@ -362,6 +543,7 @@
 
   </div>
   <!-- <script src="./assets/js/vendor/bootstrap.js"></script> -->
+  <script src="./assets/js/vendors.js"></script>
   <script src="./assets/js/all.js"></script>
 </body>
 </html>
