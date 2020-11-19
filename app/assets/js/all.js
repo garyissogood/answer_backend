@@ -3,7 +3,7 @@
 $(document).ready(() => {
 
   // menu click
-  if(location.pathname == '/admin.html'){
+  if(location.pathname == '/answer_backend/dist/admin.html'){
     $('.new-admin').hide()
     $('.all-courses').show()
     $('ul li').removeClass('active')
