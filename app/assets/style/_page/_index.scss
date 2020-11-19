@@ -1,0 +1,78 @@
+.chapter{
+    display: flex;
+    @include media-max(lg){
+        display: block;
+    }
+}
+
+.chapter-list{
+    max-width: 400px;
+    min-width: 320px;
+    @include media-max(lg){
+        max-width: 100%;
+    }
+    .list-group{
+        border-top-left-radius: 2px;
+        border-top-right-radius: 2px;
+    }
+    .list-group-item,.list-group-item{
+        border: 1px solid map-get($table-group,'border') !important;
+        transition: .3s;
+        p{
+            font-size: map-get($font-size, md);
+            line-height: map-get($font-line-height, md);
+            font-weight: bold;
+            color: map-get($color-group, 'secondary');
+        }
+        &.active{
+            background: map-get($table-group,'background') !important;
+        }
+        &:hover{
+            transition: .3s;
+            background: lighten(map-get($table-group,'background'),3%) !important;
+        }
+    }
+}
+
+.chapter-comment{
+    width: 100%;
+    .chpater-header{
+        border: 1px solid map-get($table-group,'border');
+        background: map-get($table-group,'background') !important;
+        padding: 12px 16px;
+        font-weight: bold;
+    }
+    .chapter-content{
+        padding: 0 16px;
+        border: 1px solid map-get($table-group,'border');
+        // margin-bottom: 16px;
+        p{
+            font-size: map-get($font-size, sm);
+            line-height: map-get($font-line-height, sm);
+            color: map-get($color-group, 'secondary');
+            padding: 16px 0;
+        }
+        .btn{
+            background: map-get($table-group,'background') !important;
+        }
+        .user-comment{
+            padding: 16px 0 0;
+            .user-content{
+                width: calc(100% - 40px);
+                border-bottom: 1px solid map-get($table-group,'border');
+                padding-bottom: 16px;
+            }
+            &:last-child{
+                .user-content{
+                    border-bottom: 0;
+                }
+            }
+        }
+    }
+    .editor{
+        border: 1px solid map-get($table-group, 'border');
+        .editor-content{
+            padding: 16px 24px;
+        }
+    }
+}

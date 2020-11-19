@@ -1,0 +1,251 @@
+---
+title: 首頁
+layout: ./app/layout.ejs
+engine: ejs
+current: index
+---
+
+<div class="table-content">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">
+          ID
+          <span class="material-icons text-third">
+            arrow_downward
+          </span>
+        </th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Verified</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">#1</th>
+        <td>Emir Wicks</td>
+        <td>emir.wicks@mail.com</td>
+        <td>Yes</td>
+        <td>
+            <button type="button" class="btn btn-primary bg-transparent border-0" data-toggle="modal" data-target="#edit-admin">
+              <span class="material-icons text-dark">
+                create
+              </span>
+            </button>
+            <button type="button" class="btn btn-primary bg-transparent border-0" data-toggle="modal" data-target="#review">
+              <span class="material-icons text-dark">
+                visibility
+              </span>
+            </button>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">#2</th>
+        <td>Zaina Goldsmith</td>
+        <td>zaina.goldsmith@mail.com</td>
+        <td>Yes</td>
+        <td>
+          <button type="button" class="btn btn-primary bg-transparent border-0" data-toggle="modal" data-target="#edit-admin">
+            <span class="material-icons text-dark">
+              create
+            </span>
+          </button>
+          <button type="button" class="btn btn-primary bg-transparent border-0" data-toggle="modal" data-target="#review">
+            <span class="material-icons text-dark">
+              visibility
+            </span>
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">#3</th>
+        <td>Zaina Goldsmith</td>
+        <td>zaina.goldsmith@mail.com</td>
+        <td>Yes</td>
+        <td>
+          <button type="button" class="btn btn-primary bg-transparent border-0" data-toggle="modal" data-target="#edit-admin">
+            <span class="material-icons text-dark">
+              create
+            </span>
+          </button>
+          <button type="button" class="btn btn-primary bg-transparent border-0" data-toggle="modal" data-target="#review">
+            <span class="material-icons text-dark">
+              visibility
+            </span>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!---編輯--->
+  <div class="modal fade" id="edit-admin" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog  modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Edit Admin</h5>
+          <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <div class="form-group">
+            <h5>Account</h5>
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="Name" placeholder="Emir Wicks" value="Emir Wicks">
+            </div>
+            <div class="mb-3">
+              <label for="Email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="Email" placeholder="emir.wicks@mail.com" value="emir.wicks@mail.com">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <h5>Verification</h5>
+            <div class="mb-3 d-flex justify-content-between">
+              <div class="d-flex align-items-center">
+                <span class="material-icons text-third mr-2">
+                  check_circle
+                </span>
+                <b>Verified</b>
+              </div>
+              <span>2020/4/12</span>
+            </div>
+            <div class="btn">
+              Send Verification Mail
+            </div>
+          </div>
+
+          <div class="form-group">
+            <h5>Access Level</h5>
+            <div class="mb-3">
+              <div class="dropdown">
+                <button class="btn btn-secondary bg-transparent text-dark border-0 dropdown-toggle d-flex align-items-center justify-content-between p-0 mb-xxs-4" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                    Admin
+                    <span class="material-icons">
+                        keyboard_arrow_down
+                    </span>  
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <h5>Custom Access</h5>
+            <div class="mb-3">
+              <div class="input-group-text">
+                <input type="checkbox" id="lecture" aria-label="Checkbox for following text input"> 
+                <label for="lecture">lecture</label>
+              </div>
+              <div class="input-group-text">
+                <input type="checkbox" id="Coupon" aria-label="Checkbox for following text input"> 
+                <label for="Coupon">Coupon</label>
+              </div>
+              <div class="input-group-text">
+                <input type="checkbox" id="Message" aria-label="Checkbox for following text input"> 
+                <label for="Message">Message</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <h5>Custom Access</h5>
+            <div class="mb-3">
+              <div class="d-flex text-danger danger-tip">
+                <span class="material-icons text-danger mr-xxs-8">
+                  warning
+                </span>
+                <span>This cannot be undone!</span>
+              </div>
+              <div class="btn text-danger __not-verification">
+                Deactivate This Account
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+            <input class="btn text-third" type="button" value="Cancel">
+            <input class="btn text-white bg-third ml-xxs-8" type="button" value="Update">
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!--預覽-->
+<div class="modal fade" id="review" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog  modal-dialog-centered">
+      <div class="modal-content">
+        <!-- <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Edit Admin</h5>
+        </div> -->
+        <div class="modal-body pt-xxs-32">
+            <div class="user-info d-flex">
+                <div class="user-pic pic-3 mr-xxs-24"></div>
+                <div class="user-content">
+                    <div class="d-flex align-items-center justify-content-between">
+                      <div class="user-id">#1</div>
+                      <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <span>Admin</span>
+                    <h3 class="user-name">Emir Wicks</h3>
+                    <a class="user-email" href="mailto:emir.wicks@mail.com">emir.wicks@mail.com</a>
+                    <div class="d-flex align-items-center">
+                      <span class="tag">
+                        verified
+                      </span>
+                      <span class="material-icons text-third">
+                          keyboard_arrow_up
+                      </span>  
+                    </div>
+                </div>
+            </div>
+        
+        
+        </div>
+        <div class="modal-footer">
+            <input class="btn text-third" type="button" value="Cancel">
+            <input class="btn text-white bg-third ml-xxs-8" type="button" value="Update">
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!--刪除--->
+<div class="modal fade" id="review" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog  modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Edit Admin</h5>
+          <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        
+            <div class="user-info d-flex">
+                <div class="user-pic mr-2"></div>
+                <div class="user-content">
+                    <div class="user-id">#1</div>
+                    <span>Admin</span>
+                    <h3 class="user-name">Emir Wicks</h3>
+                    <small>emir.wicks@mail.com</small>
+                    <div>verified</div>
+                </div>
+            </div>
+        
+        
+        </div>
+        <div class="modal-footer">
+            <!-- <input class="btn text-third" type="button" value="Cancel"> -->
+            <input class="btn text-danger border-danger" type="button" value="deactivate">
+            <input class="btn text-white bg-third ml-xxs-8" type="button" value="Edit">
+        </div>
+      </div>
+    </div>
+  </div>

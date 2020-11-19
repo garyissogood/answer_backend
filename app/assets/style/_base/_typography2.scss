@@ -1,0 +1,39 @@
+$fontSizes: (
+  desktop: (
+    'x-large': 32px,
+    'large': 30px,
+    'medium': 26px,
+    'normal': 18px,
+    'small': 14px,
+    'x-small': 12px
+  ), 
+  mobile: (
+    'x-large': 28px,
+    'large': 24px,
+    'medium': 20px,
+    'normal': 16px,
+    'small': 12px,
+    'x-small': 10px
+  )
+);
+​
+@mixin font-size(size: "normal") {
+  @media screen and (min-width: 768px) {
+    $desktop: map-get($fontSizes, desktop);
+    font-size: map-get($desktop, size);
+  }
+  
+  @media screen and (max-width: 767px) {
+    $mobile: map-get($fontSizes, mobile);
+    font-size: map-get($mobile, size);
+  }
+​
+}
+​
+.article {
+  @include font-size(normal);
+  
+  &.large {
+    @include font-size(large);
+  }
+}

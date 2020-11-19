@@ -1,0 +1,85 @@
+// 共用 -內寬度
+$container: 1110px;
+
+// 字體,陰影
+$font-family: "Roboto", sans-serif;
+$shadow:rgba(0,40,62,0.5);
+
+// them-語系
+// example: them-TW | them-EN
+$them-lang:'TW','JP','EN','CN','KO';
+
+$font-size:(
+    xl: 24px,
+    lg: 20px,
+    md: 16px,
+    sm: 14px,
+    xs: 12px
+);
+
+$font-line-height:(
+    xl: 36px,
+    lg: 33px,
+    md: 24px,
+    sm: 21px,
+    xs: 21px,
+);
+
+// 共用color
+// example: bg-color | text-color | border-color
+$color-group:(
+  'primary': #EDF4EE,
+  'secondary': #121212,
+  'third': #2A8356,
+  'dark':#000000,
+  'white':#ffffff,
+  'warning':'#E3006E',
+  'danger':#E3006E,
+  'success':#2A8356,
+  'tip':#707070
+);
+
+$pic-group:(
+  'pic-1':'../images/andychen.jpeg',
+  'pic-2':'../images/emilywang.jpeg',
+  'pic-3':'../images/emir.jpeg'
+);
+
+$table-group:(
+  'background': #EDF4EE,
+  'border':#CDDDCD,
+  'text':#121212
+);
+
+// 共用 -分頁
+$pagination-group: (
+    'background-active': #2A8356,
+    'background-normal': #fff,
+    'border-color':#2A8356,
+    'text-normal':#121212,
+    'text-active':#ffffff,
+);
+
+// z-index
+$z-index: (
+  sidebar: 3,
+  list-group: 1,
+);
+
+// for BV
+$breakpoints:(
+    xxs: 320.98px, // ios se5
+    xs : 575.98px, 
+    sm : 767.98px,
+    md : 991.98px,
+    lg : 1199.98px,
+    xl : 1399.98px,
+);
+
+// 動畫前綴
+$experimental-support-for-webkit: true;
+$experimental-support-for-mozilla: true;
+$experimental-support-for-opera: true;
+$experimental-support-for-microsoft: true;
+$experimental-support-for-khtml: false;
+
